@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Magic Forest Game Scene</title>
+<style>
+  body { font-family: Arial; background: #0f172a; color: white; padding: 20px; }
+  .scene { background: #1e293b; padding: 20px; border-radius: 12px; }
+  .question { margin-top: 15px; padding: 10px; background: #334155; border-radius: 8px; }
+  button { margin: 5px; padding: 8px 12px; border-radius: 6px; border: none; cursor: pointer; }
+  .hint { color: #facc15; font-size: 14px; display: none; }
+</style>
+<script>
+function checkAnswer(btn, correct){
+  if(correct){
+    alert("👏 Ting! Great job! You are amazing!");
+  } else {
+    alert("😢 Oh no! Try again!");
+  }
+}
+
+function showHint(id){
+  document.getElementById(id).style.display = "block";
+}
+</script>
+</head>
+
+<body>
+
+<div class="scene">
+
+<h2>🌟 Scene: The Whispering Crystal Grove</h2>
+<p>A glowing forest filled with floating crystals and soft magical light. The trees whisper secrets as sparkles dance in the air.</p>
+
+<h3>🎯 Mission</h3>
+<p>You meet <b>Lumi the Fox</b> 🦊 – a magical fox with glowing blue eyes.  
+To get a piece of the lost key, you must pass Lumi’s grammar challenge!</p>
+
+<h3>🎨 Image Prompt (AI)</h3>
+<p>
+3D Pixar style magical forest, glowing crystals floating in air, soft blue and purple lighting, sparkling particles, cute fox with bright eyes and magical aura, fantasy environment, cinematic lighting, highly detailed, vibrant colors
+</p>
+
+<h3>🎵 Audio Design</h3>
+<ul>
+<li>🎼 Background: Magical + adventurous (flute, piano, forest sounds)</li>
+<li>🗣 Character voice: playful, soft echo</li>
+<li>✅ Correct: 👏 + "Ting!"</li>
+<li>❌ Wrong: 😢 "Oh no!"</li>
+<li>💡 Hint: magic sparkle sound</li>
+<li>🏆 Win: soft victory music</li>
+</ul>
+
+<h3>📝 English Challenge</h3>
+
+<div class="question">
+<p>Lumi says: “I _____ this forest for many years.”</p>
+<button onclick="checkAnswer(this,true)">A. have lived</button>
+<button onclick="checkAnswer(this,false)">B. lived</button>
+<button onclick="checkAnswer(this,false)">C. live</button>
+<br>
+<button onclick="showHint('h1')">💡 Hint</button>
+<p id="h1" class="hint">Think: action started in past and still continues</p>
+<p>📘 Giải thích: Dùng "have + V3" khi hành động kéo dài đến hiện tại.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “If you try hard, you _____ succeed.”</p>
+<button onclick="checkAnswer(this,false)">A. succeeded</button>
+<button onclick="checkAnswer(this,true)">B. will succeed</button>
+<button onclick="checkAnswer(this,false)">C. succeed</button>
+<br>
+<button onclick="showHint('h2')">💡 Hint</button>
+<p id="h2" class="hint">First conditional → If + present, will + V</p>
+<p>📘 Giải thích: If + hiện tại → will + động từ.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “You _____ be careful in this forest.”</p>
+<button onclick="checkAnswer(this,true)">A. must</button>
+<button onclick="checkAnswer(this,false)">B. can</button>
+<button onclick="checkAnswer(this,false)">C. might</button>
+<br>
+<button onclick="showHint('h3')">💡 Hint</button>
+<p id="h3" class="hint">Strong advice or rule</p>
+<p>📘 Giải thích: "must" dùng khi cần thiết hoặc bắt buộc.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “I _____ never seen such magic!”</p>
+<button onclick="checkAnswer(this,true)">A. have</button>
+<button onclick="checkAnswer(this,false)">B. did</button>
+<button onclick="checkAnswer(this,false)">C. am</button>
+<br>
+<button onclick="showHint('h4')">💡 Hint</button>
+<p id="h4" class="hint">Present perfect structure</p>
+<p>📘 Giải thích: have + V3 → "have seen".</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “If it rains, we _____ hide under the tree.”</p>
+<button onclick="checkAnswer(this,true)">A. will</button>
+<button onclick="checkAnswer(this,false)">B. would</button>
+<button onclick="checkAnswer(this,false)">C. can</button>
+<br>
+<button onclick="showHint('h5')">💡 Hint</button>
+<p id="h5" class="hint">First conditional future result</p>
+<p>📘 Giải thích: If + hiện tại → will + hành động.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “You _____ take the glowing path.”</p>
+<button onclick="checkAnswer(this,true)">A. should</button>
+<button onclick="checkAnswer(this,false)">B. mustn’t</button>
+<button onclick="checkAnswer(this,false)">C. can’t</button>
+<br>
+<button onclick="showHint('h6')">💡 Hint</button>
+<p id="h6" class="hint">Advice</p>
+<p>📘 Giải thích: "should" dùng để khuyên.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “I _____ just found a clue!”</p>
+<button onclick="checkAnswer(this,true)">A. have</button>
+<button onclick="checkAnswer(this,false)">B. am</button>
+<button onclick="checkAnswer(this,false)">C. did</button>
+<br>
+<button onclick="showHint('h7')">💡 Hint</button>
+<p id="h7" class="hint">Just → present perfect</p>
+<p>📘 Giải thích: "have just + V3".</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “If you listen, you _____ hear the forest.”</p>
+<button onclick="checkAnswer(this,true)">A. will</button>
+<button onclick="checkAnswer(this,false)">B. would</button>
+<button onclick="checkAnswer(this,false)">C. should</button>
+<br>
+<button onclick="showHint('h8')">💡 Hint</button>
+<p id="h8" class="hint">Result in future</p>
+<p>📘 Giải thích: If → will.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “You _____ run too fast here.”</p>
+<button onclick="checkAnswer(this,false)">A. must</button>
+<button onclick="checkAnswer(this,true)">B. shouldn’t</button>
+<button onclick="checkAnswer(this,false)">C. can</button>
+<br>
+<button onclick="showHint('h9')">💡 Hint</button>
+<p id="h9" class="hint">Negative advice</p>
+<p>📘 Giải thích: "shouldn’t" = không nên.</p>
+</div>
+
+<div class="question">
+<p>Lumi says: “I _____ collected many crystals.”</p>
+<button onclick="checkAnswer(this,true)">A. have</button>
+<button onclick="checkAnswer(this,false)">B. am</button>
+<button onclick="checkAnswer(this,false)">C. did</button>
+<br>
+<button onclick="showHint('h10')">💡 Hint</button>
+<p id="h10" class="hint">Present perfect again</p>
+<p>📘 Giải thích: have + V3.</p>
+</div>
+
+<h3>🏆 Result</h3>
+<p>✅ Correct → Lumi jumps happily, sparkles glow ✨ + "Great job, hero!"</p>
+<p>❌ Wrong → Lumi looks sad 😢 + "Don’t worry, try again!"</p>
+
+<h3>🎁 Reward</h3>
+<p>If you score ≥ 70% → You receive a glowing key fragment 🔑✨</p>
+
+</div>
+
+</body>
+</html>
